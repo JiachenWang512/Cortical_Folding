@@ -14,3 +14,14 @@ This repository compares mechanical buckling and Turing reaction-diffusion model
 
 ```bash
 pip install -r requirements.txt
+```
+## Example
+Run simulations from Python scripts:
+
+```python
+from cortical_folding.mechanical_model import simulate_buckling
+from cortical_folding.turing_model import simulate_turing
+buckling = simulate_buckling(params, domain)
+turing = simulate_turing(params, domain, init_cond, steps)
+```
+Open `notebooks/mechanical_vs_turing.ipynb` to see side-by-side visualizations.
