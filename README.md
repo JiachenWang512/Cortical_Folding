@@ -13,7 +13,7 @@ This repository compares mechanical buckling and Turing reaction-diffusion model
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.yml
 ```
 ## Example
 Run simulations from Python scripts:
