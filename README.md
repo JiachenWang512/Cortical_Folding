@@ -1,27 +1,38 @@
 # Model Cortical Folding
 
 This is a final project for CSE 397.
+This repository implements and compares two biophysical models of cortical folding:
+1. **Mechanical Buckling**  
+2. **Turing Reaction–Diffusion**  
 
-This repository compares mechanical buckling and Turing reaction-diffusion models of cortical folding:
+## Structure
 
-- **mechanical_model**: Implements the Euler–Bernoulli buckling formulation.
-- **turing_model**: Implements a two-species reaction–diffusion system.
-- **comparison**: Quantifies similarities between pattern outputs.
-- **utils**: Helper functions for numerics and plotting.
-- **notebooks**: Interactive demonstrations.
+- **project_root/**
+  - **notebooks/**
+    - `buckling_folding.ipynb` &mdash; simulate 2D mechanical buckling  
+    - `turing_folding.ipynb` &mdash; simulate 2D Turing pattern  
+    - `comparison.ipynb` &mdash; sensitivity analysis & symbolic regression  
+  - **model/**
+    - `__init__.py`  
+    - `buckling.py`  
+    - `turing.py`  
+  - **utils/**
+    - `__init__.py`  
+    - `math_utils.py`  
+    - `plot_utils.py`  
+  - `environment.yml` &mdash; conda environment spec  
+  - `README.md`
 
 ## Installation
+1. **Clone** the repository  
+  ```bash
+  git clone https://github.com/JiachenWang512/Cortical_Folding
+  ```
+2.	**Create and activate** the Conda environment
+   ```bash
+   conda env create -f environment.yml -n cortical_folding
+   conda activate cortical_folding
+   ```
 
-```bash
-pip install -r requirements.yml
-```
-## Example
-Run simulations from Python scripts:
-
-```python
-from cortical_folding.mechanical_model import simulate_buckling
-from cortical_folding.turing_model import simulate_turing
-buckling = simulate_buckling(params, domain)
-turing = simulate_turing(params, domain, init_cond, steps)
-```
-Open `notebooks/mechanical_vs_turing.ipynb` to see side-by-side visualizations.
+## Quick start
+Run `notebooks/buckling_folding.ipynb` to see 1D, 2D simulation and visuals.
